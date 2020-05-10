@@ -107,3 +107,8 @@ alias got1r3d="cd $GOPATH/src/github.com/t1r3d/"
 export GOROOT=/usr/lib/go
 export GOPATH=/home/t1r3d/go
 export PATH=$PATH:$GOPATH/bin
+
+# tmux config
+export EDITOR=vim
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux

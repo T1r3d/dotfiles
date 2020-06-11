@@ -2,19 +2,19 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/t1r3d/.oh-my-zsh"
+export ZSH="/Users/mangui/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="ys"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "ys" "bira" "avit")
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "ys" "bira" "avit" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -64,11 +64,11 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,13 +102,19 @@ source $ZSH/oh-my-zsh.sh
 alias proxy='export http_proxy=socks5://127.0.0.1:1080; export https_proxy=socks5://127.0.0.1:1080'
 alias unproxy='unset http_proxy; unset https_proxy'
 
-# Set the common go directory
-alias got1r3d="cd $GOPATH/src/github.com/t1r3d/"
-export GOROOT=/usr/lib/go
-export GOPATH=/home/t1r3d/go
-export PATH=$PATH:$GOPATH/bin
+# Set the common go directory in Linux
+#export GOROOT=/usr/lib/go
+#export GOPATH=/home/t1r3d/go
+#export PATH=$PATH:$GOPATH/bin
+#alias got1r3d="cd $GOPATH/src/github.com/t1r3d/"
 
-# tmux config
-export EDITOR=vim
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+# Set the common go directory in Darwin
+#export GOROOT=/usr/local/go
+#export GOPATH=/Users/mangui/go
+#export PATH=$PATH:$GOPATH/bin
+#alias got1r3d="cd $GOPATH/src/github.com/t1r3d/"
+
+# tmux auto-start config
+#export EDITOR=vim
+#[[ $- != *i* ]] && return
+#[[ -z "$TMUX" ]] && exec tmux
